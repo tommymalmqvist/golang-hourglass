@@ -9,7 +9,7 @@
 package main
 
 import (
-	"fmt"
+	fmt
 )
 
 var highscore = -1000

@@ -9,7 +9,7 @@
 package main
 
 import (
-	fmt
+	"fmt"
 )
 
 var highscore = -1000
@@ -24,7 +24,7 @@ func check(x, y int, a [6][6]int) int {
 			} else {
 				res += a[tmp][x] + a[tmp][x+1] + a[tmp][x+2]
 			}
-		  tmp += 1
+			tmp += 1
 		}
 		return res
 	}
@@ -34,7 +34,7 @@ func check(x, y int, a [6][6]int) int {
 func main() {
 	var arr = [6][6]int{}
 
-	for i:= 0; i < len(arr); i++ {
+	for i := 0; i < len(arr); i++ {
 		for j := 0; j < len(arr[j]); j++ {
 			fmt.Scan(&arr[i][j])
 		}
@@ -42,7 +42,7 @@ func main() {
 	var s int
 	for y := 0; y < len(arr); y++ {
 		for x := 0; x < len(arr[y]); x++ {
-			s = check(x,y,arr)
+			s = check(x, y, arr)
 			if s > highscore {
 				highscore = s
 			}
